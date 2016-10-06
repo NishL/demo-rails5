@@ -1,14 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p>(using hello layout)</p>
+    <%= yield %>
+  </body>
+</html>
 <h1><%= @message %></h1>
 <p>This is a greeting from app/views/hello/index.html.erb</p>
 <p><%= @bonus %></p>
+<hr>
 <% for i in 1..@count %>
   <p><%= @bonus %></p>
 <% end %>
-
+<hr>
 <% @count.times do %>
   <p><%= @other_message %></p>
 <% end %>
-
+<hr>
 <% @count.times { %>
   <p><%= @third %></p>
 <% } %>
+<hr>
+<% 2.times do %>
+  <p><%= @bonus %></p>
+<% end %>
+<hr>
+<% for i in 1..100 %>
+  <% if i % 3 == 0 && i % 5 == 0 %>
+    <p>FizzBuzz</p>
+  <% elsif i % 3 == 0 %>
+    <p>Fizz</p>
+  <% elsif i % 5 == 0 %>
+    <p>Buzz</p>
+  <% else %>
+    <p><%= i %></p>
+  <% end %>
+<% end %>
