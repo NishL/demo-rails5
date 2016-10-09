@@ -6,4 +6,7 @@ class HelloController < ApplicationController
     @other_message = "Loop a different way"
     @third = "And another way"
   end
+
+  def about
+  end
 end
