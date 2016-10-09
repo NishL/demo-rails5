@@ -1,1 +1,31 @@
 <h1>Find me in view/other/index.html.erb</h1>
+
+<p>Choosing a layout based on pgrogram calculations.</p>
+
+<pre>
+  <code>
+  class HelloController < ApplicationController
+    layout :admin_or_user
+
+    def index
+      ...
+    end
+
+    private
+
+    def admin_or_user
+      if admin_authenticated
+        "admin_screen"
+      else
+        "user_screen"
+      end
+    end
+  end
+  </code>
+</pre>
+
+<p>
+  In the example above, <code>layout</code> took a reference to the <code>admin_or_user</code>
+  method, which returned the <code>user_screen</code> or <code>admin_screen</code> layout
+  as long as the value of <code>admin_authenticated</code> variable (whose value is calculated somewhere else).
+</p>
