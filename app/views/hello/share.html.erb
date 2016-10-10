@@ -30,3 +30,9 @@
 <% content_for :foot do %>
   <p>This content was created in <code>views/hello/share.html.erb</code> and called from crazy layout.</p>
 <% end %>
+
+<p>
+  Everthing above demonstrates that a template can create content that a layout can include anywhere it likes.
+  This works because the template has executed before the layout adds its own ideas. You can communicate from the template to
+  layout but not from the layout to the template.
+</p>
