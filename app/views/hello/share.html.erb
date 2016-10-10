@@ -1,0 +1,32 @@
+<% content_for (:meta) do %>
+<meta name="description" content="A description of the page" />
+<% end %>
+<h1>find in: app/views/hello/share.html.erb</h1>
+
+<h2>Sharing Template Data with the Layout</h2>
+<p>
+  <strong>Layouts</strong> and <strong>view templates</strong> share the same information from the <strong>controller</strong>,
+  but there may be times when a view template should include information that needs to be embedded in the layout. This might be
+  navigation particular to different areas of a site, personailzation, or some kind of status bar, for instance, that shows the
+  user how far they've gone through a particular task.
+  </thead>
+</p>
+
+<h1><%= @message %></h1>
+<p>This is a greeting from views/share.html.erb</p>
+
+<% for i in 1..@count %>
+  <p><%= @bonus %></p>
+<% end %>
+
+<% content_for(:list) do %>
+  <ol>
+  <% for i in 1..@count %>
+    <li><%= @bonus %></li>
+  <% end %>
+  </ol>
+<% end %>
+
+<% content_for :foot do %>
+  <p>This content was created in <code>views/hello/share.html.erb</code> and called from crazy layout.</p>
+<% end %>
