@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   #get 'hello/index'
-  get 'hello' => 'hello#index'
+  #get 'hello' => 'hello#index'
+  root 'hello#index'
   get 'about' => 'hello#about'
   #get 'share' => 'hello#share'
   get 'hello/share'
