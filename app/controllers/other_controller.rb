@@ -1,5 +1,5 @@
 class OtherController < ApplicationController
-  #layout "crazy"
+  layout "hello"
 
   def index
   end

@@ -1,4 +1,5 @@
 class HelloController < ApplicationController
+  layout "crazy"
   def index
     @message = "Hello"
     @count = 3
@@ -8,5 +9,10 @@ class HelloController < ApplicationController
   end
 
   def about
+  end
+
+  def share
+    @count = 5
+    @bonus = "This is another message."
   end
 end

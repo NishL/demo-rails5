@@ -3,13 +3,17 @@
   <head>
     <title>Hey Crazy!!!</title>
     <%= csrf_meta_tags %>
-
+    <%= yield :meta %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <p>Check out all the different layouts.</p>
+    <!--layout will incorporate "list" from view-->
+    <%= yield :list %>
     <p>(using crazy layout)</p>
     <%= yield %>
+    <%= yield :foot %>
   </body>
 </html>
